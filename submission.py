@@ -471,14 +471,14 @@ def test(data, classifier_file):  # do not change the heading of the function
                 res.append(c)
     return res
 
-# import helper
+import helper
 # train(helper.read_data("training_data.txt"),"dump.dat")
-# res=test(helper.read_data("syl.txt"),"dump.dat")
-#
-# l=[]
-# with open("res.txt")as f:
-# 	for line in f:
-# 		line=line.strip()
-# 		l.append(int(line))
-#
-# print(f1_score(l,res,average='macro'))
+res=test(helper.read_data("syl.txt"),"dump.dat")
+
+l=[]
+with open("res.txt")as f:
+	for line in f:
+		line=line.strip()
+		l.append(int(line))
+
+print(f1_score(l,res,average='macro'))
